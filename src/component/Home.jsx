@@ -1,12 +1,22 @@
+import web3Image from "../assets/images/image-web-3-desktop.jpg";
+import web3ImageMobile from "../assets/images/image-web-3-mobile.jpg";
+import retroPCsImage from "../assets/images/image-retro-pcs.jpg";
+import topLaptopsImage from "../assets/images/image-top-laptops.jpg";
+import gamingGrowthImage from "../assets/images/image-gaming-growth.jpg";
 function Home() {
   return (
     <main className="mx-auto p-6 w-full md:w-[1200px] ">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-8">
         <section>
           <img
-            src="src/assets/images/image-web-3-desktop.jpg"
+            src={web3Image}
             alt=""
-            className="h-[260px] w-full"
+            className="md:flex hidden h-[260px] w-full"
+          />
+          <img
+            src={web3ImageMobile}
+            alt=""
+            className="md:hidden h-[260px] w-full"
           />
           <div className=" mt-5 grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-10 items-center md:items-end md: md:mt-8 w-full">
             <h1 className="font-bold text-5xl capitalize max-w-[20rem] text-left ">
@@ -61,11 +71,7 @@ function Home() {
       </div>
       <section className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-12">
         <div className="flex space-x-3 h-full ">
-          <img
-            src="src/assets/images/image-retro-pcs.jpg"
-            alt="retro"
-            className="h-[150px]"
-          />
+          <img src={retroPCsImage} alt="retro" className="h-[150px]" />
           <div className="flex flex-col space-y-3 p-2">
             <h1 className="text-zinc-400 font-semibold text-3xl">01</h1>
             <h3 className=" font-extrabold hover:text-red-500 cursor-pointer">
@@ -78,11 +84,7 @@ function Home() {
         </div>
 
         <div className="flex space-x-3 h-full ">
-          <img
-            src="src/assets/images/image-top-laptops.jpg"
-            alt="laptops"
-            className="h-[150px]"
-          />
+          <img src={topLaptopsImage} alt="laptops" className="h-[150px]" />
           <div className="flex flex-col space-y-3 p-2">
             <h1 className="text-zinc-400 font-semibold text-3xl">02</h1>
             <h3 className=" font-extrabold hover:text-red-500 cursor-pointer">
@@ -96,7 +98,7 @@ function Home() {
 
         <div className="flex space-x-3 h-full ">
           <img
-            src="src/assets/images/image-gaming-growth.jpg"
+            src={gamingGrowthImage}
             alt="gaming-growth"
             className="h-[150px]"
           />

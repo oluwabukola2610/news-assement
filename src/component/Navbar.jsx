@@ -1,5 +1,7 @@
 import { useState } from "react";
-
+import MenuBtn from "../assets/svg/MenuBtn";
+import Closebtn from "../assets/svg/Closebtn";
+import Logo from "../assets/svg/Logo";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,16 +13,10 @@ function Navbar() {
     <nav className=" max-w-[1200px] mx-auto p-4">
       <div className="flex justify-between items-center">
         <div>
-          <img src="/src/assets/images/logo.svg" alt="Logo" className="h-8" />
+          <Logo className="h-8" />
         </div>
         <div className="block md:hidden">
-          <button onClick={toggleMenu}>
-            <img
-              src="src/assets/images/icon-menu.svg"
-              alt="menu-btn"
-              className="block ml-20 md:hidden"
-            />
-          </button>
+          <MenuBtn onClick={toggleMenu} className="block ml-20 md:hidden" />
         </div>
         <div className="hidden md:flex md:flex-row md:space-x-4">
           <a
@@ -62,12 +58,7 @@ function Navbar() {
             onClick={toggleMenu}
           ></div>
           <div className="absolute top-0 right-0 z-50 h-full w-[250px]  bg-white shadow-lg">
-            <button onClick={toggleMenu} className="absolute top-3 right-5">
-              <img
-                src="/src/assets/images/icon-menu-close.svg"
-                alt="close-btn"
-              />
-            </button>
+            <Closebtn className="absolute top-3 right-5" onClick={toggleMenu} />
             <div className="space-y-6 p-3 mt-16">
               <a
                 href="#"
